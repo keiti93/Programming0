@@ -20,6 +20,7 @@ def member(x, xs):
     for item in xs:
         if x == item:
             a = True
+            break
     return a
 
 
