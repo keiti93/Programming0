@@ -14,4 +14,6 @@ while count <= n:
     
 print ("Count of evens:", len(numbers))
 print ("Evens are:")
-print (numbers)
+
+for i in numbers:
+    print (i)
