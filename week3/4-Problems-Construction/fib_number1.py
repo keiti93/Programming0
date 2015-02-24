@@ -11,19 +11,26 @@ def fib(x):
             count += 1
     return fib_list
 
+def counter(x):
+    result = 0
+    while x != 0:
+        result += 1
+        x = x//10
+
+    return result
+
+
 def fib_number(numbers):
     number = 0
+    
     for num in numbers:
-        if num>9 and num<100:
-            number = number*100 + num
-        elif num>99 and num<1000:
-            number = number*1000 + num
-        elif num>999 and num<10000:
-            number = number*10000 + num
-        elif num>9999 and num<100000:
-            number = number*100000 + num
+        
+        if num>9:
+            zeros = 10**counter(num)
+            number = number*zeros + num
         else:
             number = number*10 + num
+            
     return number
 
 n = input("Enter n: ")
